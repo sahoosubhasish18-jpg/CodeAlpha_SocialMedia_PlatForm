@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Social Media</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mini Social Media</h1>
+    <p>Build profiles, share posts, comment, like, and follow friends.</p>
+  </header>
+
+  <main>
+    <section class="panel" id="user-panel">
+      <h2>Create Profile</h2>
+      <form id="user-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <textarea id="bio" placeholder="Bio"></textarea>
+        <button type="submit">Create User</button>
+      </form>
+      <div class="small-note">Select your current user to post, like, comment, and follow.</div>
+      <select id="current-user"></select>
+    </section>
+
+    <section class="panel" id="post-panel">
+      <h2>New Post</h2>
+      <form id="post-form">
+        <textarea id="post-content" placeholder="Share an update..." required></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section class="panel" id="feed-panel">
+      <h2>Feed</h2>
+      <div id="feed"></div>
+    </section>
+  </main>
+
+  <template id="post-template">
+    <article class="post">
+      <header>
+        <div>
+          <strong class="post-author"></strong>
+          <span class="post-timestamp"></span>
+        </div>
+        <button class="follow-button"></button>
+      </header>
+      <p class="post-content"></p>
+      <div class="post-meta">
+        <button class="like-button"></button>
+        <span class="like-count"></span>
+        <span class="comment-count"></span>
+      </div>
+      <div class="comments"></div>
+      <form class="comment-form">
+        <input type="text" class="comment-input" placeholder="Add a comment..." required />
+        <button type="submit">Comment</button>
+      </form>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fb;
+  color: #17202a;
+}
+
+header {
+  background: linear-gradient(135deg, #3d7af9, #1b3b88);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.88;
+}
+
+main {
+  max-width: 1040px;
+  margin: -2rem auto 2rem;
+  padding: 0 1rem 2rem;
+}
+
+.panel {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 16px 40px rgba(23, 32, 42, 0.08);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input[type='text'], textarea, select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.3rem;
+  background: #3d7af9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #335fd2;
+}
+
+#feed {
+  display: grid;
+  gap: 1rem;
+}
+
+.post {
+  border: 1px solid #e5eaf2;
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.post header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-author {
+  display: block;
+  font-size: 1rem;
+}
+
+.post-timestamp {
+  display: block;
+  color: #6b7a8f;
+  font-size: 0.9rem;
+}
+
+.follow-button,
+.like-button {
+  background: #f2f5ff;
+  color: #2f4db0;
+  padding: 0.6rem 1rem;
+}
+
+.like-count,
+.comment-count {
+  color: #4b587a;
+  font-size: 0.95rem;
+  margin-left: 0.75rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0.75rem 0;
+}
+
+.comments {
+  margin-top: 1rem;
+  border-top: 1px solid #eef2f7;
+  padding-top: 1rem;
+}
+
+.comment {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.comment strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.small-note {
+  color: #5a6377;
+  font-size: 0.94rem;
+}
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+  }
+
+  #feed-panel {
+    grid-column: 1 / -1;
+  }
+}
